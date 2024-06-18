@@ -69,10 +69,20 @@ function log(message: string | number): void {
 /* Interfaces */
 interface UserInterface {
     id: number,
-    name: string
+    name: string,
+    age?: number
 }
 
 const User1: UserInterface = {
     id: 1,
     name: 'John'
-} 
+}
+// User1.id = 5;
+
+/* Interface with functions */
+interface MathFunc {
+    (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
